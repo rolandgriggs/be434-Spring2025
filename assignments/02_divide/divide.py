@@ -6,6 +6,7 @@ Purpose: divide 2 numbers
 """
 
 import argparse
+import sys
 
 
 # --------------------------------------------------
@@ -33,14 +34,14 @@ def main():
     num1, num2 = args.ints
 
     if num2 == 0:
-        print('usage: divide.py [-h] INT INT')
-        print('divide.py: error: Cannot divide by zero, dum-dum!')
-        return
+        print('usage: divide.py [-h] INT INT', file=sys.stderr)
+        print('divide.py: error: Cannot divide by zero, dum-dum!', file=sys.stderr)
+        return 1
 
-    result = num1 // num2
-    print(f'{num1} / {num2} = {result}')
+    print(f'{num1} / {num2} = {num1 // num2}')
+    return 0
 
 
 # --------------------------------------------------
 if __name__ == '__main__':
-    main()
+   sys.exit(main())
