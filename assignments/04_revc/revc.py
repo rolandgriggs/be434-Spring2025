@@ -8,6 +8,7 @@ Purpose: Add Your Purpose
 import argparse
 import os
 
+
 # --------------------------------------------------
 def get_args():
     parser = argparse.ArgumentParser(
@@ -39,6 +40,8 @@ def main():
     dna = args.dna
 
     print(reverse_complement(dna))
+
+
 # --------------------------------------------------
 if __name__ == '__main__':
     main()
