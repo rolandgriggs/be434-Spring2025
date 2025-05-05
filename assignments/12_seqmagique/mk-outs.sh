@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 PRG="./seqmagique.py"
-DIR="./tests/inputs"
+DIR="./inputs"
 INPUT1="${DIR}/1.fa"
 INPUT2="${DIR}/2.fa"
 EMPTY="${DIR}/empty.fa"

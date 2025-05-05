@@ -14,6 +14,7 @@ SPIDERS_OUT = './outputs/spiders.txt'
 BUSTLE = './inputs/bustle.txt'
 BUSTLE_OUT = './outputs/bustle.txt'
 
+
 # --------------------------------------------------
 def random_string():
     """ Generate a random string """
@@ -94,10 +95,8 @@ def test_spiders():
 def test_spiders_n():
     """ spiders -n 4"""
 
-    expected = '\n'.join([
-        "HSR'X ASVVC, WTMHIVW,", 'M OIIT LSYWI',
-        'GEWYEPPC.'
-    ])
+    expected = '\n'.join(
+        ["HSR'X ASVVC, WTMHIVW,", 'M OIIT LSYWI', 'GEWYEPPC.'])
     run([SPIDERS], ['-n 4'], expected)
 
 
@@ -105,10 +104,8 @@ def test_spiders_n():
 def test_spiders_decode():
     """ spiders --decode """
 
-    expected = '\n'.join([
-        "DON'T WORRY, SPIDERS,", 'I KEEP HOUSE',
-        'CASUALLY.'
-    ])
+    expected = '\n'.join(
+        ["DON'T WORRY, SPIDERS,", 'I KEEP HOUSE', 'CASUALLY.'])
     run([SPIDERS_OUT], ['--decode'], expected)
 
 
@@ -117,15 +114,10 @@ def test_bustle():
     """ bustle """
 
     expected = '\n'.join([
-        'WKH EXVWOH LQ D KRXVH',
-        'WKH PRUQLQJ DIWHU GHDWK',
-        'LV VROHPQHVW RI LQGXVWULHV',
-        'HQDFWHG XSRQ HDUWK,—',
-        '',
-        "WKH VZHHSLQJ XS WKH KHDUW,",
-        'DQG SXWWLQJ ORYH DZDB',
-        'ZH VKDOO QRW ZDQW WR XVH DJDLQ', 
-        'XQWLO HWHUQLWB.'
+        'WKH EXVWOH LQ D KRXVH', 'WKH PRUQLQJ DIWHU GHDWK',
+        'LV VROHPQHVW RI LQGXVWULHV', 'HQDFWHG XSRQ HDUWK,—', '',
+        "WKH VZHHSLQJ XS WKH KHDUW,", 'DQG SXWWLQJ ORYH DZDB',
+        'ZH VKDOO QRW ZDQW WR XVH DJDLQ', 'XQWLO HWHUQLWB.'
     ])
     run([BUSTLE], [], expected)
 
@@ -135,15 +127,11 @@ def test_bustle_n():
     """ bustle -n 4"""
 
     expected = '\n'.join([
-        'XLI FYWXPI MR E LSYWI',
-        'XLI QSVRMRK EJXIV HIEXL',
-        'MW WSPIQRIWX SJ MRHYWXVMIW',
-        "IREGXIH YTSR IEVXL,—",
-        '',
-        "XLI WAIITMRK YT XLI LIEVX,",
-        'ERH TYXXMRK PSZI EAEC',
-        'AI WLEPP RSX AERX XS YWI EKEMR',
-        'YRXMP IXIVRMXC.'])
+        'XLI FYWXPI MR E LSYWI', 'XLI QSVRMRK EJXIV HIEXL',
+        'MW WSPIQRIWX SJ MRHYWXVMIW', "IREGXIH YTSR IEVXL,—", '',
+        "XLI WAIITMRK YT XLI LIEVX,", 'ERH TYXXMRK PSZI EAEC',
+        'AI WLEPP RSX AERX XS YWI EKEMR', 'YRXMP IXIVRMXC.'
+    ])
     run([BUSTLE], ['-n 4'], expected)
 
 
@@ -152,13 +140,9 @@ def test_bustle_decode():
     """ bustle --decode """
 
     expected = '\n'.join([
-        'THE BUSTLE IN A HOUSE',
-        'THE MORNING AFTER DEATH',
-        'IS SOLEMNEST OF INDUSTRIES',
-        "ENACTED UPON EARTH,—",
-        '',
-        "THE SWEEPING UP THE HEART,",
-        'AND PUTTING LOVE AWAY',
-        'WE SHALL NOT WANT TO USE AGAIN',
-        'UNTIL ETERNITY.'])
+        'THE BUSTLE IN A HOUSE', 'THE MORNING AFTER DEATH',
+        'IS SOLEMNEST OF INDUSTRIES', "ENACTED UPON EARTH,—", '',
+        "THE SWEEPING UP THE HEART,", 'AND PUTTING LOVE AWAY',
+        'WE SHALL NOT WANT TO USE AGAIN', 'UNTIL ETERNITY.'
+    ])
     run([BUSTLE_OUT], ['--decode'], expected)

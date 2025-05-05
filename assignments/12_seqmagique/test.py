@@ -7,10 +7,10 @@ import re
 from subprocess import getstatusoutput, getoutput
 
 PRG = './seqmagique.py'
-EMPTY = ('./inputs/empty.fa', './tests/inputs/empty.fa.out')
-TEST1 = ('./inputs/1.fa', './tests/inputs/1.fa.out')
-TEST2 = ('./inputs/2.fa', './tests/inputs/2.fa.out')
-ALL = ('./inputs/*.fa', './tests/inputs/all.fa.out')
+EMPTY = ('./inputs/empty.fa', './inputs/empty.fa.out')
+TEST1 = ('./inputs/1.fa', './inputs/1.fa.out')
+TEST2 = ('./inputs/2.fa', './inputs/2.fa.out')
+ALL = ('./inputs/*.fa', './inputs/all.fa.out')
 
 
 # --------------------------------------------------
